@@ -1,0 +1,24 @@
+{% load static tailwind_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body class="bg-blue-500-100 m-0 p-0">
+    <header class="bg-green-500 text-white p-4">
+        <nav class="container mx-auto flex justify-center items-center">
+            <div class="flex space-x-4">
+                <a href="{% url 'signin' %}" class="mr-4">Signin/Signup</a>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto py-8">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
